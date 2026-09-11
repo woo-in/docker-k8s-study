@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 470" width="880" height="470" font-family="'Apple SD Gothic Neo','Noto Sans KR','Malgun Gothic','Segoe UI',sans-serif">
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#2496ed"/>
+    </marker>
+  </defs>
+
+  <rect x="0.5" y="0.5" width="879" height="469" rx="16" fill="#ffffff" stroke="#e2e8f0"/>
+  <line x1="440" y1="30" x2="440" y2="430" stroke="#e2e8f0" stroke-dasharray="6 4"/>
+
+  <!-- ===== VM (left) ===== -->
+  <text x="230" y="44" text-anchor="middle" font-size="19" font-weight="700" fill="#0f172a">VM — 하드웨어 수준 가상화</text>
+  <text x="230" y="66" text-anchor="middle" font-size="13" fill="#64748b">하드웨어 자원을 쪼갠다</text>
+
+  <!-- VM 1 -->
+  <rect x="40" y="90" width="185" height="220" rx="10" fill="#eff6ff" stroke="#3b82f6"/>
+  <text x="132.5" y="113" text-anchor="middle" font-size="14" font-weight="700" fill="#1d4ed8">VM 1</text>
+  <rect x="54" y="124" width="157" height="36" rx="6" fill="#ffffff" stroke="#cbd5e1"/>
+  <text x="132.5" y="147" text-anchor="middle" font-size="13" fill="#0f172a">앱</text>
+  <rect x="54" y="168" width="157" height="44" rx="6" fill="#ffe4e6" stroke="#f43f5e"/>
+  <text x="132.5" y="195" text-anchor="middle" font-size="13" font-weight="700" fill="#be123c">게스트 OS 커널</text>
+  <rect x="54" y="220" width="157" height="76" rx="6" fill="#ffffff" stroke="#94a3b8" stroke-dasharray="4 3"/>
+  <text x="132.5" y="251" text-anchor="middle" font-size="13" font-weight="700" fill="#475569">가짜 하드웨어</text>
+  <text x="132.5" y="273" text-anchor="middle" font-size="12" fill="#64748b">CPU · 메모리 · 디스크</text>
+
+  <!-- VM 2 -->
+  <rect x="235" y="90" width="185" height="220" rx="10" fill="#eff6ff" stroke="#3b82f6"/>
+  <text x="327.5" y="113" text-anchor="middle" font-size="14" font-weight="700" fill="#1d4ed8">VM 2</text>
+  <rect x="249" y="124" width="157" height="36" rx="6" fill="#ffffff" stroke="#cbd5e1"/>
+  <text x="327.5" y="147" text-anchor="middle" font-size="13" fill="#0f172a">앱</text>
+  <rect x="249" y="168" width="157" height="44" rx="6" fill="#ffe4e6" stroke="#f43f5e"/>
+  <text x="327.5" y="195" text-anchor="middle" font-size="13" font-weight="700" fill="#be123c">게스트 OS 커널</text>
+  <rect x="249" y="220" width="157" height="76" rx="6" fill="#ffffff" stroke="#94a3b8" stroke-dasharray="4 3"/>
+  <text x="327.5" y="251" text-anchor="middle" font-size="13" font-weight="700" fill="#475569">가짜 하드웨어</text>
+  <text x="327.5" y="273" text-anchor="middle" font-size="12" fill="#64748b">CPU · 메모리 · 디스크</text>
+
+  <rect x="40" y="322" width="380" height="44" rx="8" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="230" y="349" text-anchor="middle" font-size="14" font-weight="700" fill="#92400e">하이퍼바이저 — 하드웨어 가상화 소프트웨어</text>
+  <rect x="40" y="374" width="380" height="44" rx="8" fill="#e2e8f0" stroke="#94a3b8"/>
+  <text x="230" y="401" text-anchor="middle" font-size="14" font-weight="700" fill="#334155">물리 하드웨어</text>
+
+  <text x="230" y="449" text-anchor="middle" font-size="13.5" fill="#475569">VM마다 <tspan font-weight="700" fill="#be123c">커널이 따로</tspan> 있다</text>
+
+  <!-- ===== Docker (right) ===== -->
+  <text x="650" y="44" text-anchor="middle" font-size="19" font-weight="700" fill="#0f172a">Docker — OS 수준 가상화</text>
+  <text x="650" y="66" text-anchor="middle" font-size="13" fill="#64748b">OS(커널)가 관리하는 자원을 쪼갠다</text>
+
+  <rect x="460" y="90" width="380" height="56" rx="10" fill="#f0f8fe" stroke="#2496ed" stroke-dasharray="5 4"/>
+  <text x="650" y="113" text-anchor="middle" font-size="14" font-weight="700" fill="#1d6fb8">Docker</text>
+  <text x="650" y="134" text-anchor="middle" font-size="12" fill="#475569">시작할 때 namespace + cgroup만 걸어준다</text>
+  <line x1="552.5" y1="146" x2="552.5" y2="165" stroke="#2496ed" stroke-dasharray="3 3" marker-end="url(#arrow)"/>
+  <line x1="747.5" y1="146" x2="747.5" y2="165" stroke="#2496ed" stroke-dasharray="3 3" marker-end="url(#arrow)"/>
+
+  <!-- Container 1 -->
+  <rect x="460" y="168" width="185" height="142" rx="10" fill="#e8f4fd" stroke="#2496ed"/>
+  <text x="552.5" y="191" text-anchor="middle" font-size="14" font-weight="700" fill="#1d6fb8">컨테이너 1</text>
+  <rect x="474" y="202" width="157" height="36" rx="6" fill="#ffffff" stroke="#cbd5e1"/>
+  <text x="552.5" y="225" text-anchor="middle" font-size="13" fill="#0f172a">앱 (프로세스)</text>
+  <rect x="474" y="246" width="157" height="52" rx="6" fill="#ffffff" stroke="#94a3b8" stroke-dasharray="4 3"/>
+  <text x="552.5" y="267" text-anchor="middle" font-size="12" font-weight="700" fill="#475569">가짜 PID · IP/포트</text>
+  <text x="552.5" y="287" text-anchor="middle" font-size="12" font-weight="700" fill="#475569">가짜 파일시스템 (/)</text>
+
+  <!-- Container 2 -->
+  <rect x="655" y="168" width="185" height="142" rx="10" fill="#e8f4fd" stroke="#2496ed"/>
+  <text x="747.5" y="191" text-anchor="middle" font-size="14" font-weight="700" fill="#1d6fb8">컨테이너 2</text>
+  <rect x="669" y="202" width="157" height="36" rx="6" fill="#ffffff" stroke="#cbd5e1"/>
+  <text x="747.5" y="225" text-anchor="middle" font-size="13" fill="#0f172a">앱 (프로세스)</text>
+  <rect x="669" y="246" width="157" height="52" rx="6" fill="#ffffff" stroke="#94a3b8" stroke-dasharray="4 3"/>
+  <text x="747.5" y="267" text-anchor="middle" font-size="12" font-weight="700" fill="#475569">가짜 PID · IP/포트</text>
+  <text x="747.5" y="287" text-anchor="middle" font-size="12" font-weight="700" fill="#475569">가짜 파일시스템 (/)</text>
+
+  <rect x="460" y="322" width="380" height="44" rx="8" fill="#ffe4e6" stroke="#f43f5e"/>
+  <text x="650" y="349" text-anchor="middle" font-size="14" font-weight="700" fill="#be123c">Linux 커널 — 모든 컨테이너가 함께 사용</text>
+  <rect x="460" y="374" width="380" height="44" rx="8" fill="#e2e8f0" stroke="#94a3b8"/>
+  <text x="650" y="401" text-anchor="middle" font-size="14" font-weight="700" fill="#334155">물리 하드웨어</text>
+
+  <text x="650" y="449" text-anchor="middle" font-size="13.5" fill="#475569"><tspan font-weight="700" fill="#be123c">커널 하나</tspan>를 모든 컨테이너가 함께 쓴다</text>
+</svg>
