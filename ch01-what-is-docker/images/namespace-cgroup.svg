@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 450" width="880" height="450" font-family="'Apple SD Gothic Neo','Noto Sans KR','Malgun Gothic','Segoe UI',sans-serif">
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#2496ed"/>
+    </marker>
+  </defs>
+
+  <rect x="0.5" y="0.5" width="879" height="449" rx="16" fill="#ffffff" stroke="#e2e8f0"/>
+
+  <text x="440" y="42" text-anchor="middle" font-size="17" font-weight="700" fill="#0f172a">namespace는 '보이는 범위'를, cgroup은 '쓸 수 있는 양'을 나눈다</text>
+
+  <!-- Docker -->
+  <rect x="30" y="150" width="200" height="110" rx="10" fill="#f0f8fe" stroke="#2496ed" stroke-dasharray="5 4"/>
+  <text x="130" y="183" text-anchor="middle" font-size="16" font-weight="700" fill="#1d6fb8">Docker</text>
+  <text x="130" y="208" text-anchor="middle" font-size="12.5" fill="#475569">프로세스를 시작할 때</text>
+  <text x="130" y="227" text-anchor="middle" font-size="12.5" fill="#475569">격리 설정을 걸어주고</text>
+  <text x="130" y="246" text-anchor="middle" font-size="12.5" fill="#475569">실행 중에는 개입하지 않음</text>
+  <line x1="230" y1="205" x2="266" y2="205" stroke="#2496ed" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <!-- Container -->
+  <rect x="270" y="66" width="580" height="298" rx="12" fill="#e8f4fd" stroke="#2496ed"/>
+  <text x="560" y="94" text-anchor="middle" font-size="15" font-weight="700" fill="#1d6fb8">컨테이너 = 격리 설정이 붙은 리눅스 프로세스</text>
+
+  <text x="290" y="124" font-size="13" font-weight="700" fill="#4338ca">namespace — 보이는 범위</text>
+
+  <rect x="290" y="134" width="170" height="38" rx="6" fill="#eef2ff" stroke="#818cf8"/>
+  <text x="375" y="158" text-anchor="middle" font-size="13" font-weight="700" fill="#3730a3">PID namespace</text>
+  <rect x="468" y="134" width="366" height="38" rx="6" fill="#ffffff" stroke="#cbd5e1"/>
+  <text x="484" y="158" font-size="13" fill="#0f172a">자기 프로세스만 보인다 (자기가 PID 1)</text>
+
+  <rect x="290" y="180" width="170" height="38" rx="6" fill="#eef2ff" stroke="#818cf8"/>
+  <text x="375" y="204" text-anchor="middle" font-size="13" font-weight="700" fill="#3730a3">Network namespace</text>
+  <rect x="468" y="180" width="366" height="38" rx="6" fill="#ffffff" stroke="#cbd5e1"/>
+  <text x="484" y="204" font-size="13" fill="#0f172a">자기만의 IP · 포트 목록을 가진 것처럼</text>
+
+  <rect x="290" y="226" width="170" height="38" rx="6" fill="#eef2ff" stroke="#818cf8"/>
+  <text x="375" y="250" text-anchor="middle" font-size="13" font-weight="700" fill="#3730a3">Mount namespace</text>
+  <rect x="468" y="226" width="366" height="38" rx="6" fill="#ffffff" stroke="#cbd5e1"/>
+  <text x="484" y="250" font-size="13" fill="#0f172a">자기만의 파일시스템 루트(/)를 가진 것처럼</text>
+
+  <text x="290" y="292" font-size="13" font-weight="700" fill="#b45309">cgroup — 쓸 수 있는 양</text>
+
+  <rect x="290" y="302" width="170" height="44" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="375" y="329" text-anchor="middle" font-size="13" font-weight="700" fill="#92400e">cgroup</text>
+  <rect x="468" y="302" width="366" height="44" rx="6" fill="#ffffff" stroke="#cbd5e1"/>
+  <text x="484" y="329" font-size="13" fill="#0f172a">CPU · 메모리 사용 상한선</text>
+  <rect x="650" y="318" width="160" height="12" rx="6" fill="#e2e8f0"/>
+  <rect x="650" y="318" width="96" height="12" rx="6" fill="#fbbf24"/>
+  <line x1="782" y1="312" x2="782" y2="336" stroke="#dc2626" stroke-width="2"/>
+
+  <!-- Kernel -->
+  <rect x="30" y="382" width="820" height="44" rx="8" fill="#ffe4e6" stroke="#f43f5e"/>
+  <text x="440" y="409" text-anchor="middle" font-size="14" font-weight="700" fill="#be123c">Linux 커널 (모두 함께 사용) — 실행 중 격리를 지키는 건 커널이다</text>
+</svg>
