@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 400" width="880" height="400" font-family="'Apple SD Gothic Neo','Noto Sans KR','Malgun Gothic','Segoe UI',sans-serif">
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#2496ed"/>
+    </marker>
+  </defs>
+
+  <rect x="0.5" y="0.5" width="879" height="399" rx="16" fill="#ffffff" stroke="#e2e8f0"/>
+
+  <text x="440" y="40" text-anchor="middle" font-size="17" font-weight="700" fill="#0f172a">포트 바인딩 — 호스트의 포트를 컨테이너의 포트에 연결한다</text>
+
+  <!-- Host side -->
+  <rect x="36" y="72" width="330" height="268" rx="12" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.5"/>
+  <text x="201" y="100" text-anchor="middle" font-size="14" font-weight="700" fill="#334155">호스트 (물리 서버)</text>
+
+  <rect x="66" y="118" width="270" height="52" rx="10" fill="#ffffff" stroke="#94a3b8"/>
+  <text x="201" y="150" text-anchor="middle" font-size="14" font-weight="700" fill="#0f172a" font-family="monospace">8080</text>
+  <rect x="66" y="184" width="270" height="52" rx="10" fill="#ffffff" stroke="#94a3b8"/>
+  <text x="201" y="216" text-anchor="middle" font-size="14" font-weight="700" fill="#0f172a" font-family="monospace">8081</text>
+  <rect x="66" y="250" width="270" height="52" rx="10" fill="#ffffff" stroke="#94a3b8"/>
+  <text x="201" y="282" text-anchor="middle" font-size="14" font-weight="700" fill="#0f172a" font-family="monospace">8082</text>
+  <text x="201" y="326" text-anchor="middle" font-size="11.5" fill="#64748b">포트 번호는 겹칠 수 없다</text>
+
+  <!-- Arrows -->
+  <line x1="366" y1="144" x2="512" y2="144" stroke="#2496ed" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <line x1="366" y1="210" x2="512" y2="210" stroke="#2496ed" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <line x1="366" y1="276" x2="512" y2="276" stroke="#2496ed" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <text x="439" y="136" text-anchor="middle" font-size="11.5" font-weight="700" fill="#2563eb">-p 8080:80</text>
+  <text x="439" y="202" text-anchor="middle" font-size="11.5" font-weight="700" fill="#2563eb">-p 8081:80</text>
+  <text x="439" y="268" text-anchor="middle" font-size="11.5" font-weight="700" fill="#2563eb">-p 8082:80</text>
+
+  <!-- Containers -->
+  <rect x="516" y="72" width="328" height="268" rx="12" fill="#ffffff" stroke="#e2e8f0"/>
+  <text x="680" y="100" text-anchor="middle" font-size="14" font-weight="700" fill="#334155">컨테이너 (아파치)</text>
+
+  <rect x="546" y="118" width="270" height="52" rx="10" fill="#e8f4fd" stroke="#2496ed"/>
+  <text x="600" y="150" text-anchor="middle" font-size="13" font-weight="700" fill="#1d6fb8">컨테이너 1</text>
+  <text x="742" y="150" text-anchor="middle" font-size="14" font-weight="700" fill="#0f172a" font-family="monospace">80</text>
+
+  <rect x="546" y="184" width="270" height="52" rx="10" fill="#e8f4fd" stroke="#2496ed"/>
+  <text x="600" y="216" text-anchor="middle" font-size="13" font-weight="700" fill="#1d6fb8">컨테이너 2</text>
+  <text x="742" y="216" text-anchor="middle" font-size="14" font-weight="700" fill="#0f172a" font-family="monospace">80</text>
+
+  <rect x="546" y="250" width="270" height="52" rx="10" fill="#e8f4fd" stroke="#2496ed"/>
+  <text x="600" y="282" text-anchor="middle" font-size="13" font-weight="700" fill="#1d6fb8">컨테이너 3</text>
+  <text x="742" y="282" text-anchor="middle" font-size="14" font-weight="700" fill="#0f172a" font-family="monospace">80</text>
+
+  <text x="680" y="326" text-anchor="middle" font-size="11.5" fill="#64748b">컨테이너끼리는 격리돼 있어 같은 80번을 써도 된다</text>
+
+  <text x="440" y="374" text-anchor="middle" font-size="12.5" fill="#475569"><tspan font-weight="700" fill="#2563eb">아파치</tspan> = 웹 서버 기능을 제공하는 소프트웨어</text>
+</svg>

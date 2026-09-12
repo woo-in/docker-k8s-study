@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 420" width="880" height="420" font-family="'Apple SD Gothic Neo','Noto Sans KR','Malgun Gothic','Segoe UI',sans-serif">
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#64748b"/>
+    </marker>
+    <marker id="arrowBlue" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#2496ed"/>
+    </marker>
+  </defs>
+
+  <rect x="0.5" y="0.5" width="879" height="419" rx="16" fill="#ffffff" stroke="#e2e8f0"/>
+
+  <text x="440" y="40" text-anchor="middle" font-size="17" font-weight="700" fill="#0f172a">docker run 하나가 세 가지 일을 한다</text>
+
+  <rect x="36" y="66" width="180" height="58" rx="10" fill="#0f172a"/>
+  <text x="126" y="93" text-anchor="middle" font-size="14" font-weight="700" fill="#ffffff" font-family="monospace">docker run</text>
+  <text x="126" y="113" text-anchor="middle" font-size="11.5" fill="#94a3b8">container run</text>
+
+  <text x="236" y="102" font-size="20" font-weight="700" fill="#64748b">=</text>
+
+  <rect x="266" y="66" width="176" height="58" rx="10" fill="#fef9c3" stroke="#eab308"/>
+  <text x="354" y="90" text-anchor="middle" font-size="13" font-weight="700" fill="#a16207" font-family="monospace">image pull</text>
+  <text x="354" y="110" text-anchor="middle" font-size="11.5" fill="#854d0e">이미지 내려받기</text>
+
+  <text x="452" y="102" font-size="18" font-weight="700" fill="#64748b">+</text>
+
+  <rect x="472" y="66" width="176" height="58" rx="10" fill="#e8f4fd" stroke="#2496ed"/>
+  <text x="560" y="90" text-anchor="middle" font-size="13" font-weight="700" fill="#1d6fb8" font-family="monospace">container create</text>
+  <text x="560" y="110" text-anchor="middle" font-size="11.5" fill="#1d4ed8">컨테이너 생성</text>
+
+  <text x="658" y="102" font-size="18" font-weight="700" fill="#64748b">+</text>
+
+  <rect x="678" y="66" width="162" height="58" rx="10" fill="#e8f4fd" stroke="#2496ed"/>
+  <text x="759" y="90" text-anchor="middle" font-size="13" font-weight="700" fill="#1d6fb8" font-family="monospace">container start</text>
+  <text x="759" y="110" text-anchor="middle" font-size="11.5" fill="#1d4ed8">실행</text>
+
+  <line x1="36" y1="152" x2="844" y2="152" stroke="#e2e8f0"/>
+
+  <text x="440" y="184" text-anchor="middle" font-size="15" font-weight="700" fill="#0f172a">컨테이너 생애주기</text>
+
+  <!-- Cycle -->
+  <rect x="60" y="210" width="170" height="62" rx="10" fill="#e8f4fd" stroke="#2496ed"/>
+  <text x="145" y="238" text-anchor="middle" font-size="14" font-weight="700" fill="#1d6fb8">실행</text>
+  <text x="145" y="258" text-anchor="middle" font-size="12" fill="#334155" font-family="monospace">docker run</text>
+
+  <rect x="270" y="210" width="170" height="62" rx="10" fill="#f8fafc" stroke="#cbd5e1"/>
+  <text x="355" y="238" text-anchor="middle" font-size="14" font-weight="700" fill="#334155">정지</text>
+  <text x="355" y="258" text-anchor="middle" font-size="12" fill="#334155" font-family="monospace">docker stop</text>
+
+  <rect x="480" y="210" width="170" height="62" rx="10" fill="#ffe4e6" stroke="#f43f5e"/>
+  <text x="565" y="238" text-anchor="middle" font-size="14" font-weight="700" fill="#be123c">폐기</text>
+  <text x="565" y="258" text-anchor="middle" font-size="12" fill="#334155" font-family="monospace">docker rm</text>
+
+  <rect x="690" y="210" width="150" height="62" rx="10" fill="#e8f4fd" stroke="#2496ed"/>
+  <text x="765" y="238" text-anchor="middle" font-size="14" font-weight="700" fill="#1d6fb8">생성</text>
+  <text x="765" y="258" text-anchor="middle" font-size="12" fill="#334155" font-family="monospace">docker run</text>
+
+  <line x1="230" y1="241" x2="262" y2="241" stroke="#64748b" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <line x1="440" y1="241" x2="472" y2="241" stroke="#64748b" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <line x1="650" y1="241" x2="682" y2="241" stroke="#64748b" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <path d="M765,272 L765,296 L145,296 L145,276" fill="none" stroke="#2496ed" stroke-width="1.5" stroke-dasharray="6 4" marker-end="url(#arrowBlue)"/>
+  <text x="455" y="316" text-anchor="middle" font-size="12" font-weight="700" fill="#2563eb">다시 실행</text>
+
+  <!-- Options -->
+  <rect x="60" y="334" width="780" height="62" rx="10" fill="#f8fafc" stroke="#cbd5e1"/>
+  <text x="88" y="358" font-size="12.5" font-weight="700" fill="#0f172a">자주 쓰는 옵션</text>
+  <text x="88" y="380" font-size="12.5" fill="#475569" font-family="monospace">--name</text>
+  <text x="168" y="380" font-size="12" fill="#64748b">이름 지정</text>
+  <text x="272" y="380" font-size="12.5" fill="#475569" font-family="monospace">-d</text>
+  <text x="302" y="380" font-size="12" fill="#64748b">백그라운드 실행</text>
+  <text x="428" y="380" font-size="12.5" fill="#475569" font-family="monospace">-p 호스트:컨테이너</text>
+  <text x="588" y="380" font-size="12" fill="#64748b">포트번호 바인딩</text>
+  <text x="704" y="380" font-size="12.5" fill="#475569" font-family="monospace">-a</text>
+  <text x="734" y="380" font-size="12" fill="#64748b">모든 상태 출력</text>
+</svg>
