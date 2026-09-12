@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 390" width="880" height="390" font-family="'Apple SD Gothic Neo','Noto Sans KR','Malgun Gothic','Segoe UI',sans-serif">
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <rect x="0.5" y="0.5" width="879" height="389" rx="16" fill="#ffffff" stroke="#e2e8f0"/>
+
+  <text x="440" y="40" text-anchor="middle" font-size="17" font-weight="700" fill="#0f172a">도커 허브 → 이미지 → 컨테이너</text>
+
+  <!-- Docker Hub -->
+  <rect x="36" y="90" width="230" height="210" rx="12" fill="#e8f4fd" stroke="#2496ed" stroke-width="1.5"/>
+  <text x="151" y="120" text-anchor="middle" font-size="15" font-weight="700" fill="#1d6fb8">도커 허브</text>
+  <text x="151" y="141" text-anchor="middle" font-size="12" fill="#64748b">공개 이미지가 모여 있는 레지스트리</text>
+  <rect x="54" y="156" width="194" height="30" rx="6" fill="#ffffff" stroke="#cbd5e1"/>
+  <text x="151" y="176" text-anchor="middle" font-size="12" fill="#0f172a">ubuntu · centos (운영체제만)</text>
+  <rect x="54" y="192" width="194" height="30" rx="6" fill="#ffffff" stroke="#cbd5e1"/>
+  <text x="151" y="212" text-anchor="middle" font-size="12" fill="#0f172a">mysql · mariadb · postgres</text>
+  <rect x="54" y="228" width="194" height="30" rx="6" fill="#ffffff" stroke="#cbd5e1"/>
+  <text x="151" y="248" text-anchor="middle" font-size="12" fill="#0f172a">nginx · sendmail</text>
+  <text x="151" y="282" text-anchor="middle" font-size="11.5" fill="#64748b">운영체제 × 소프트웨어 × 버전의 조합</text>
+
+  <line x1="266" y1="195" x2="352" y2="195" stroke="#64748b" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <text x="309" y="186" text-anchor="middle" font-size="12" font-weight="700" fill="#2563eb">내려받기</text>
+
+  <!-- Image -->
+  <rect x="356" y="140" width="170" height="110" rx="12" fill="#fef9c3" stroke="#eab308" stroke-width="1.5"/>
+  <text x="441" y="172" text-anchor="middle" font-size="15" font-weight="700" fill="#a16207">이미지</text>
+  <text x="441" y="196" text-anchor="middle" font-size="12" fill="#854d0e">컨테이너를 만드는</text>
+  <text x="441" y="214" text-anchor="middle" font-size="12" fill="#854d0e">재료 (읽기 전용)</text>
+  <text x="441" y="238" text-anchor="middle" font-size="11.5" fill="#64748b">소프트웨어 + 유저랜드</text>
+
+  <line x1="526" y1="195" x2="608" y2="112" stroke="#64748b" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <line x1="526" y1="195" x2="608" y2="195" stroke="#64748b" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <line x1="526" y1="195" x2="608" y2="278" stroke="#64748b" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <text x="567" y="186" text-anchor="middle" font-size="12" font-weight="700" fill="#2563eb">만들기</text>
+
+  <!-- Containers -->
+  <rect x="612" y="86" width="230" height="52" rx="10" fill="#e8f4fd" stroke="#2496ed"/>
+  <text x="727" y="117" text-anchor="middle" font-size="13.5" font-weight="700" fill="#1d6fb8">컨테이너 1</text>
+  <rect x="612" y="169" width="230" height="52" rx="10" fill="#e8f4fd" stroke="#2496ed"/>
+  <text x="727" y="200" text-anchor="middle" font-size="13.5" font-weight="700" fill="#1d6fb8">컨테이너 2</text>
+  <rect x="612" y="252" width="230" height="52" rx="10" fill="#e8f4fd" stroke="#2496ed"/>
+  <text x="727" y="283" text-anchor="middle" font-size="13.5" font-weight="700" fill="#1d6fb8">컨테이너 3</text>
+
+  <text x="440" y="352" text-anchor="middle" font-size="13" fill="#475569">이미지 하나로 <tspan font-weight="700" fill="#2563eb">똑같은 컨테이너를 몇 개든</tspan> 만들 수 있다</text>
+  <text x="440" y="372" text-anchor="middle" font-size="12" fill="#64748b">이미지 = 붕어빵 틀, 컨테이너 = 찍어낸 붕어빵</text>
+</svg>
