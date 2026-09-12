@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 380" width="880" height="380" font-family="'Apple SD Gothic Neo','Noto Sans KR','Malgun Gothic','Segoe UI',sans-serif">
+  <rect x="0.5" y="0.5" width="879" height="379" rx="16" fill="#ffffff" stroke="#e2e8f0"/>
+
+  <text x="440" y="40" text-anchor="middle" font-size="17" font-weight="700" fill="#0f172a">도커 커맨드의 구조</text>
+
+  <!-- Slots -->
+  <rect x="36" y="72" width="104" height="54" rx="10" fill="#0f172a"/>
+  <text x="88" y="105" text-anchor="middle" font-size="15" font-weight="700" fill="#ffffff" font-family="monospace">docker</text>
+
+  <rect x="150" y="72" width="150" height="54" rx="10" fill="#e8f4fd" stroke="#2496ed" stroke-width="1.5"/>
+  <text x="225" y="105" text-anchor="middle" font-size="14" font-weight="700" fill="#1d6fb8">상위 커맨드</text>
+
+  <rect x="310" y="72" width="150" height="54" rx="10" fill="#e8f4fd" stroke="#2496ed" stroke-width="1.5"/>
+  <text x="385" y="105" text-anchor="middle" font-size="14" font-weight="700" fill="#1d6fb8">하위 커맨드</text>
+
+  <rect x="470" y="72" width="120" height="54" rx="10" fill="#f8fafc" stroke="#cbd5e1"/>
+  <text x="530" y="105" text-anchor="middle" font-size="14" font-weight="700" fill="#334155">옵션</text>
+
+  <rect x="600" y="72" width="120" height="54" rx="10" fill="#fef9c3" stroke="#eab308" stroke-width="1.5"/>
+  <text x="660" y="105" text-anchor="middle" font-size="14" font-weight="700" fill="#a16207">대상</text>
+
+  <rect x="730" y="72" width="110" height="54" rx="10" fill="#f8fafc" stroke="#cbd5e1"/>
+  <text x="785" y="105" text-anchor="middle" font-size="14" font-weight="700" fill="#334155">인자</text>
+
+  <!-- Meanings -->
+  <text x="225" y="152" text-anchor="middle" font-size="15" font-weight="700" fill="#0f172a">무엇을</text>
+  <text x="225" y="174" text-anchor="middle" font-size="12" fill="#64748b">컨테이너 · 이미지 등 12종류</text>
+
+  <text x="385" y="152" text-anchor="middle" font-size="15" font-weight="700" fill="#0f172a">어떻게</text>
+  <text x="385" y="174" text-anchor="middle" font-size="12" fill="#64748b">run · stop · rm · ls …</text>
+
+  <text x="530" y="152" text-anchor="middle" font-size="13" font-weight="700" fill="#334155">세세한 설정</text>
+  <text x="530" y="174" text-anchor="middle" font-size="12" fill="#64748b">-d · -p · --name</text>
+
+  <text x="660" y="152" text-anchor="middle" font-size="13" font-weight="700" fill="#334155">구체적인 이름</text>
+  <text x="660" y="174" text-anchor="middle" font-size="12" fill="#64748b">이미지 · 컨테이너 이름</text>
+
+  <text x="785" y="152" text-anchor="middle" font-size="13" font-weight="700" fill="#334155">전달할 값</text>
+
+  <line x1="36" y1="200" x2="844" y2="200" stroke="#e2e8f0"/>
+
+  <!-- Upper commands -->
+  <text x="440" y="232" text-anchor="middle" font-size="14" font-weight="700" fill="#0f172a">주로 쓰는 상위 커맨드</text>
+
+  <rect x="140" y="250" width="150" height="46" rx="10" fill="#e8f4fd" stroke="#2496ed"/>
+  <text x="215" y="278" text-anchor="middle" font-size="13.5" font-weight="700" fill="#1d6fb8" font-family="monospace">container</text>
+  <rect x="300" y="250" width="150" height="46" rx="10" fill="#e8f4fd" stroke="#2496ed"/>
+  <text x="375" y="278" text-anchor="middle" font-size="13.5" font-weight="700" fill="#1d6fb8" font-family="monospace">image</text>
+  <rect x="460" y="250" width="150" height="46" rx="10" fill="#e8f4fd" stroke="#2496ed"/>
+  <text x="535" y="278" text-anchor="middle" font-size="13.5" font-weight="700" fill="#1d6fb8" font-family="monospace">volume</text>
+  <rect x="620" y="250" width="150" height="46" rx="10" fill="#e8f4fd" stroke="#2496ed"/>
+  <text x="695" y="278" text-anchor="middle" font-size="13.5" font-weight="700" fill="#1d6fb8" font-family="monospace">network</text>
+
+  <text x="440" y="334" text-anchor="middle" font-size="13" fill="#475569"><tspan font-weight="700" fill="#2563eb">무엇을</tspan> + <tspan font-weight="700" fill="#2563eb">어떻게</tspan>만 정하면 나머지는 같은 자리에 끼워 넣는다</text>
+  <text x="440" y="358" text-anchor="middle" font-size="12" fill="#64748b">상위 커맨드는 생략할 수 있는 경우가 있다 — docker ps = docker container ls</text>
+</svg>
