@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 430" width="880" height="430" font-family="'Apple SD Gothic Neo','Noto Sans KR','Malgun Gothic','Segoe UI',sans-serif">
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#64748b"/>
+    </marker>
+    <marker id="arrowBlue" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#2496ed"/>
+    </marker>
+  </defs>
+
+  <rect x="0.5" y="0.5" width="879" height="429" rx="16" fill="#ffffff" stroke="#e2e8f0"/>
+
+  <text x="440" y="40" text-anchor="middle" font-size="17" font-weight="700" fill="#0f172a">컨테이너는 쓰고 버리고, 데이터는 남긴다</text>
+
+  <!-- Lifecycle boxes -->
+  <rect x="46" y="104" width="158" height="58" rx="10" fill="#e8f4fd" stroke="#2496ed"/>
+  <text x="125" y="139" text-anchor="middle" font-size="14" font-weight="700" fill="#1d6fb8">만들고</text>
+  <rect x="248" y="104" width="158" height="58" rx="10" fill="#e8f4fd" stroke="#2496ed"/>
+  <text x="327" y="139" text-anchor="middle" font-size="14" font-weight="700" fill="#1d6fb8">실행하고</text>
+  <rect x="450" y="104" width="158" height="58" rx="10" fill="#e8f4fd" stroke="#2496ed"/>
+  <text x="529" y="139" text-anchor="middle" font-size="14" font-weight="700" fill="#1d6fb8">종료하고</text>
+  <rect x="652" y="104" width="158" height="58" rx="10" fill="#ffe4e6" stroke="#f43f5e"/>
+  <text x="731" y="139" text-anchor="middle" font-size="14" font-weight="700" fill="#be123c">폐기하고</text>
+
+  <line x1="204" y1="133" x2="240" y2="133" stroke="#64748b" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <line x1="406" y1="133" x2="442" y2="133" stroke="#64748b" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <line x1="608" y1="133" x2="644" y2="133" stroke="#64748b" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <!-- Loop back -->
+  <path d="M731,104 L731,74 L125,74 L125,100" fill="none" stroke="#2496ed" stroke-width="1.5" stroke-dasharray="6 4" marker-end="url(#arrowBlue)"/>
+  <text x="428" y="66" text-anchor="middle" font-size="12" font-weight="700" fill="#2563eb">새 이미지로 다시 만들어 갈아탄다</text>
+
+  <!-- Data arrow -->
+  <line x1="529" y1="162" x2="529" y2="252" stroke="#2496ed" stroke-width="1.5" stroke-dasharray="6 4" marker-end="url(#arrowBlue)"/>
+  <text x="545" y="212" font-size="12" font-weight="700" fill="#2563eb">데이터는 여기에 저장</text>
+
+  <!-- Host disk -->
+  <rect x="46" y="256" width="764" height="88" rx="12" fill="#f1f5f9" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="428" y="288" text-anchor="middle" font-size="15" font-weight="700" fill="#334155">도커가 설치된 물리 서버의 디스크 (마운트해서 사용)</text>
+  <text x="428" y="312" text-anchor="middle" font-size="12.5" fill="#475569">컨테이너를 버려도 데이터는 그대로 남아, 새 컨테이너가 이어서 쓴다</text>
+  <text x="428" y="332" text-anchor="middle" font-size="11.5" fill="#64748b">DB 데이터 · 업로드 파일 · 설정값</text>
+
+  <!-- Summary -->
+  <rect x="46" y="362" width="374" height="50" rx="10" fill="#ffffff" stroke="#cbd5e1"/>
+  <text x="233" y="383" text-anchor="middle" font-size="12.5" font-weight="700" fill="#0f172a">운영체제 · 소프트웨어</text>
+  <text x="233" y="402" text-anchor="middle" font-size="12" fill="#be123c">컨테이너로 만들었다 쓰고 버리기를 반복</text>
+
+  <rect x="436" y="362" width="374" height="50" rx="10" fill="#ffffff" stroke="#cbd5e1"/>
+  <text x="623" y="383" text-anchor="middle" font-size="12.5" font-weight="700" fill="#0f172a">데이터</text>
+  <text x="623" y="402" text-anchor="middle" font-size="12" fill="#2563eb">다른 곳에 저장해 같은 것을 계속 사용</text>
+</svg>
