@@ -55,10 +55,10 @@
 
 ### 5장. 여러 개의 컨테이너를 연동해 실행해보자
 
-- [ ] 워드프레스 구축 흐름 — **도커 네트워크**로 컨테이너 연결하기
-- [ ] WordPress + MySQL 컨테이너 연동
-- [ ] 긴 `docker run` 명령어를 읽고 쓸 수 있게 되기
-- [ ] Redmine + MariaDB 컨테이너 연동 실습
+📝 [정리 노트](./ch05-multi-container/README.md)
+
+- 도커 엔진이 관리하는 인프라는 컨테이너만이 아니다. 컨테이너끼리 통신하는 **네트워크**, 데이터를 컨테이너 밖에 남기는 **볼륨**이 있다.
+- 네트워크는 `docker network create` / `docker network rm`, 볼륨은 `docker volume create` / `docker volume rm`. 컨테이너와 같은 `docker (상위) (하위)` 형식이다.
 
 ### 6장. 실전에 활용 가능한 컨테이너 사용법을 익히자
 
