@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 460" width="880" height="460" font-family="'Apple SD Gothic Neo','Noto Sans KR','Malgun Gothic','Segoe UI',sans-serif">
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <rect x="0.5" y="0.5" width="879" height="459" rx="16" fill="#ffffff" stroke="#e2e8f0"/>
+
+  <text x="440" y="40" text-anchor="middle" font-size="17" font-weight="700" fill="#0f172a">이미지를 만드는 두 가지 방법</text>
+
+  <!-- 1. commit -->
+  <rect x="36" y="70" width="220" height="58" rx="10" fill="#e8f4fd" stroke="#2496ed"/>
+  <text x="146" y="95" text-anchor="middle" font-size="14" font-weight="700" fill="#1d6fb8">기존 컨테이너</text>
+  <text x="146" y="115" text-anchor="middle" font-size="11.5" fill="#1d4ed8">직접 개조한 컨테이너</text>
+
+  <text x="440" y="90" text-anchor="middle" font-size="12.5" font-weight="700" fill="#0f172a" font-family="monospace">docker commit 컨테이너_이름 이미지_이름</text>
+  <line x1="264" y1="99" x2="616" y2="99" stroke="#64748b" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <text x="440" y="118" text-anchor="middle" font-size="11.5" fill="#64748b">기존 컨테이너를 그대로 이미지로 변환</text>
+
+  <!-- 2. Dockerfile -->
+  <rect x="36" y="150" width="220" height="78" rx="10" fill="#fef9c3" stroke="#eab308"/>
+  <text x="146" y="175" text-anchor="middle" font-size="14" font-weight="700" fill="#a16207">재료 폴더</text>
+  <text x="146" y="197" text-anchor="middle" font-size="12" fill="#854d0e" font-family="monospace">Dockerfile</text>
+  <text x="146" y="216" text-anchor="middle" font-size="11.5" fill="#854d0e">+ 컨테이너에 넣을 파일</text>
+
+  <text x="440" y="180" text-anchor="middle" font-size="12.5" font-weight="700" fill="#0f172a" font-family="monospace">docker build -t 이미지_이름 재료_폴더_경로</text>
+  <line x1="264" y1="189" x2="616" y2="189" stroke="#64748b" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <text x="440" y="208" text-anchor="middle" font-size="11.5" fill="#64748b">Dockerfile에 적힌 대로 이미지를 쌓아 올림</text>
+
+  <!-- Image -->
+  <rect x="624" y="70" width="220" height="158" rx="10" fill="#0f172a"/>
+  <text x="734" y="142" text-anchor="middle" font-size="16" font-weight="700" fill="#ffffff">이미지</text>
+  <text x="734" y="166" text-anchor="middle" font-size="11.5" fill="#94a3b8">이 이미지로 컨테이너를 대량 생성</text>
+
+  <line x1="36" y1="252" x2="844" y2="252" stroke="#e2e8f0"/>
+
+  <!-- Layers -->
+  <text x="60" y="282" font-size="15" font-weight="700" fill="#0f172a">이미지는 서로를 베이스로 쌓인 계층 구조</text>
+  <text x="844" y="282" text-anchor="end" font-size="12" font-weight="700" fill="#2563eb">FROM = 이 지점부터 이어서 쌓겠다</text>
+
+  <rect x="60" y="298" width="360" height="30" rx="6" fill="#0f172a"/>
+  <text x="240" y="318" text-anchor="middle" font-size="13" font-weight="700" fill="#ffffff">내 이미지</text>
+  <rect x="60" y="332" width="360" height="30" rx="6" fill="#e8f4fd" stroke="#2496ed"/>
+  <text x="240" y="352" text-anchor="middle" font-size="13" font-weight="700" fill="#1d6fb8" font-family="monospace">openjdk</text>
+  <rect x="60" y="366" width="360" height="30" rx="6" fill="#e8f4fd" stroke="#2496ed"/>
+  <text x="240" y="386" text-anchor="middle" font-size="13" font-weight="700" fill="#1d6fb8">우분투</text>
+  <rect x="60" y="400" width="360" height="30" rx="6" fill="#f8fafc" stroke="#cbd5e1" stroke-dasharray="5 3"/>
+  <text x="240" y="420" text-anchor="middle" font-size="12" fill="#64748b">… 더 아래 베이스</text>
+
+  <line x1="424" y1="313" x2="460" y2="313" stroke="#cbd5e1" stroke-dasharray="3 3"/>
+  <text x="470" y="318" font-size="12.5" fill="#475569">내 Dockerfile</text>
+  <text x="640" y="318" font-size="12.5" font-weight="700" fill="#1d6fb8" font-family="monospace">FROM openjdk</text>
+
+  <line x1="424" y1="347" x2="460" y2="347" stroke="#cbd5e1" stroke-dasharray="3 3"/>
+  <text x="470" y="352" font-size="12.5" fill="#475569">openjdk Dockerfile</text>
+  <text x="640" y="352" font-size="12.5" font-weight="700" fill="#1d6fb8" font-family="monospace">FROM 우분투</text>
+
+  <line x1="424" y1="381" x2="460" y2="381" stroke="#cbd5e1" stroke-dasharray="3 3"/>
+  <text x="470" y="386" font-size="12.5" fill="#475569">우분투 Dockerfile</text>
+  <text x="640" y="386" font-size="12.5" font-weight="700" fill="#1d6fb8" font-family="monospace">FROM …</text>
+</svg>

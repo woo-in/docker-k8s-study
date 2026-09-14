@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 360" width="880" height="360" font-family="'Apple SD Gothic Neo','Noto Sans KR','Malgun Gothic','Segoe UI',sans-serif">
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#64748b"/>
+    </marker>
+    <marker id="arrowBlue" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#2496ed"/>
+    </marker>
+  </defs>
+
+  <rect x="0.5" y="0.5" width="879" height="359" rx="16" fill="#ffffff" stroke="#e2e8f0"/>
+
+  <text x="440" y="40" text-anchor="middle" font-size="17" font-weight="700" fill="#0f172a">레지스트리로 이미지를 올리고 받아 쓰는 흐름</text>
+
+  <!-- My computer / CI -->
+  <rect x="36" y="64" width="240" height="190" rx="12" fill="#f8fafc" stroke="#cbd5e1"/>
+  <text x="156" y="88" text-anchor="middle" font-size="13" font-weight="700" fill="#475569">내 컴퓨터 · CI</text>
+
+  <rect x="52" y="104" width="208" height="52" rx="10" fill="#fef9c3" stroke="#eab308"/>
+  <text x="156" y="126" text-anchor="middle" font-size="13" font-weight="700" fill="#a16207" font-family="monospace">docker build</text>
+  <text x="156" y="145" text-anchor="middle" font-size="11.5" fill="#854d0e">Dockerfile → 이미지</text>
+
+  <line x1="156" y1="156" x2="156" y2="170" stroke="#64748b" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <rect x="52" y="174" width="208" height="62" rx="10" fill="#e8f4fd" stroke="#2496ed"/>
+  <text x="156" y="197" text-anchor="middle" font-size="13" font-weight="700" fill="#1d6fb8" font-family="monospace">docker tag</text>
+  <text x="156" y="222" text-anchor="middle" font-size="11" fill="#334155" font-family="monospace">레지스트리_주소/리포지토리:버전</text>
+
+  <!-- Registry -->
+  <rect x="346" y="64" width="188" height="190" rx="12" fill="#0f172a"/>
+  <text x="440" y="92" text-anchor="middle" font-size="14" font-weight="700" fill="#ffffff">도커 레지스트리</text>
+  <text x="440" y="112" text-anchor="middle" font-size="11.5" fill="#94a3b8">이미지를 배포하는 장소</text>
+  <rect x="360" y="136" width="160" height="22" rx="6" fill="#1e293b"/>
+  <text x="440" y="151" text-anchor="middle" font-size="12" fill="#ffffff">도커 허브 (공식)</text>
+  <rect x="360" y="164" width="160" height="22" rx="6" fill="#1e293b"/>
+  <text x="440" y="179" text-anchor="middle" font-size="12" fill="#ffffff">GHCR</text>
+  <rect x="360" y="192" width="160" height="22" rx="6" fill="#1e293b"/>
+  <text x="440" y="207" text-anchor="middle" font-size="12" fill="#ffffff">사내 · 비공개 레지스트리</text>
+  <text x="440" y="238" text-anchor="middle" font-size="11" fill="#94a3b8">리포지토리 단위로 저장</text>
+
+  <!-- Server -->
+  <rect x="604" y="64" width="240" height="190" rx="12" fill="#f8fafc" stroke="#cbd5e1"/>
+  <text x="724" y="88" text-anchor="middle" font-size="13" font-weight="700" fill="#475569">서버 (EC2)</text>
+
+  <rect x="620" y="104" width="208" height="52" rx="10" fill="#e8f4fd" stroke="#2496ed"/>
+  <text x="724" y="126" text-anchor="middle" font-size="13" font-weight="700" fill="#1d6fb8" font-family="monospace">docker pull</text>
+  <text x="724" y="145" text-anchor="middle" font-size="11.5" fill="#1d4ed8">이미지 받기</text>
+
+  <line x1="724" y1="156" x2="724" y2="170" stroke="#64748b" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <rect x="620" y="174" width="208" height="62" rx="10" fill="#e8f4fd" stroke="#2496ed"/>
+  <text x="724" y="197" text-anchor="middle" font-size="13" font-weight="700" fill="#1d6fb8" font-family="monospace">docker run</text>
+  <text x="724" y="222" text-anchor="middle" font-size="11.5" fill="#1d4ed8">받은 이미지 그대로 컨테이너 실행</text>
+
+  <!-- push / pull -->
+  <line x1="262" y1="205" x2="340" y2="205" stroke="#2496ed" stroke-width="1.5" marker-end="url(#arrowBlue)"/>
+  <text x="311" y="197" text-anchor="middle" font-size="12.5" font-weight="700" fill="#2496ed" font-family="monospace">push</text>
+  <line x1="538" y1="130" x2="614" y2="130" stroke="#2496ed" stroke-width="1.5" marker-end="url(#arrowBlue)"/>
+  <text x="569" y="122" text-anchor="middle" font-size="12.5" font-weight="700" fill="#2496ed" font-family="monospace">pull</text>
+
+  <!-- Footer -->
+  <rect x="36" y="276" width="808" height="60" rx="10" fill="#f8fafc" stroke="#cbd5e1"/>
+  <text x="440" y="301" text-anchor="middle" font-size="13" font-weight="700" fill="#0f172a">이미지 = 프로그램 파일 + 돌아가는 데 필요한 환경 전부 + 실행 방법</text>
+  <text x="440" y="322" text-anchor="middle" font-size="12" fill="#64748b">그래서 서버는 빌드 없이 pull → run 만으로 똑같이 실행된다</text>
+</svg>
