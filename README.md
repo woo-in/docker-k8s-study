@@ -62,7 +62,7 @@
 
 ### 6장. 실전에 활용 가능한 컨테이너 사용법을 익히자
 
-📝 [정리 노트](./ch06-container-in-practice/README.md)
+🔗 [#5 docs: 6장 실전에 활용 가능한 컨테이너 사용법을 익히자 정리 (ch06)](https://github.com/woo-in/docker-k8s-study/pull/5) · 📝 [정리 노트](./ch06-container-in-practice/README.md)
 
 > 볼륨 마운트 · 이미지 만들기 · 도커 허브 로그인만 정리했습니다. (파일 복사, 컨테이너 개조는 제외)
 
