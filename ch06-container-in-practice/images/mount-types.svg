@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 420" width="880" height="420" font-family="'Apple SD Gothic Neo','Noto Sans KR','Malgun Gothic','Segoe UI',sans-serif">
+  <defs>
+    <marker id="arrowBlue" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#2496ed"/>
+    </marker>
+    <marker id="arrowYellow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#eab308"/>
+    </marker>
+  </defs>
+
+  <rect x="0.5" y="0.5" width="879" height="419" rx="16" fill="#ffffff" stroke="#e2e8f0"/>
+
+  <text x="440" y="40" text-anchor="middle" font-size="17" font-weight="700" fill="#0f172a">스토리지 마운트의 두 종류</text>
+
+  <!-- Volume mount -->
+  <rect x="36" y="64" width="396" height="196" rx="12" fill="#f8fafc" stroke="#cbd5e1"/>
+  <text x="56" y="90" font-size="15" font-weight="700" fill="#1d6fb8">볼륨 마운트</text>
+
+  <rect x="56" y="106" width="170" height="120" rx="10" fill="#ffffff" stroke="#cbd5e1"/>
+  <text x="141" y="126" text-anchor="middle" font-size="12" fill="#475569">호스트 컴퓨터</text>
+  <rect x="68" y="136" width="146" height="78" rx="8" fill="#e8f4fd" stroke="#2496ed" stroke-dasharray="5 3"/>
+  <text x="141" y="154" text-anchor="middle" font-size="11" fill="#1d4ed8">도커 엔진 관리 영역</text>
+  <rect x="91" y="164" width="100" height="38" rx="6" fill="#2496ed"/>
+  <text x="141" y="188" text-anchor="middle" font-size="13" font-weight="700" fill="#ffffff">볼륨</text>
+
+  <rect x="276" y="126" width="136" height="90" rx="10" fill="#e8f4fd" stroke="#2496ed"/>
+  <text x="344" y="150" text-anchor="middle" font-size="13" font-weight="700" fill="#1d6fb8">컨테이너</text>
+  <text x="344" y="174" text-anchor="middle" font-size="11" fill="#64748b">콘텐츠 저장 경로</text>
+  <text x="344" y="196" text-anchor="middle" font-size="11.5" fill="#334155" font-family="monospace">/var/lib/mysql</text>
+
+  <line x1="193" y1="183" x2="270" y2="183" stroke="#2496ed" stroke-width="1.5" marker-end="url(#arrowBlue)"/>
+  <text x="234" y="248" text-anchor="middle" font-size="12" fill="#475569" font-family="monospace">-v 볼륨_이름:컨테이너_경로</text>
+
+  <!-- Bind mount -->
+  <rect x="448" y="64" width="396" height="196" rx="12" fill="#f8fafc" stroke="#cbd5e1"/>
+  <text x="468" y="90" font-size="15" font-weight="700" fill="#a16207">바인드 마운트</text>
+
+  <rect x="468" y="106" width="170" height="120" rx="10" fill="#ffffff" stroke="#cbd5e1"/>
+  <text x="553" y="126" text-anchor="middle" font-size="12" fill="#475569">호스트 컴퓨터</text>
+  <rect x="480" y="136" width="146" height="78" rx="8" fill="#fef9c3" stroke="#eab308" stroke-dasharray="5 3"/>
+  <text x="553" y="154" text-anchor="middle" font-size="11" fill="#854d0e">도커 엔진 관리 밖</text>
+  <rect x="503" y="164" width="100" height="38" rx="6" fill="#eab308"/>
+  <text x="553" y="188" text-anchor="middle" font-size="13" font-weight="700" fill="#ffffff">문서 폴더</text>
+
+  <rect x="688" y="126" width="136" height="90" rx="10" fill="#e8f4fd" stroke="#2496ed"/>
+  <text x="756" y="150" text-anchor="middle" font-size="13" font-weight="700" fill="#1d6fb8">컨테이너</text>
+  <text x="756" y="174" text-anchor="middle" font-size="11" fill="#64748b">콘텐츠 저장 경로</text>
+  <text x="756" y="196" text-anchor="middle" font-size="11.5" fill="#334155" font-family="monospace">/app/data</text>
+
+  <line x1="605" y1="183" x2="682" y2="183" stroke="#eab308" stroke-width="1.5" marker-end="url(#arrowYellow)"/>
+  <text x="646" y="248" text-anchor="middle" font-size="12" fill="#475569" font-family="monospace">-v 호스트_경로:컨테이너_경로</text>
+
+  <!-- Comparison -->
+  <rect x="36" y="276" width="808" height="120" rx="10" fill="#f8fafc" stroke="#cbd5e1"/>
+  <text x="52" y="302" font-size="12.5" font-weight="700" fill="#0f172a">스토리지 영역</text>
+  <text x="234" y="302" text-anchor="middle" font-size="12" fill="#334155">볼륨</text>
+  <text x="646" y="302" text-anchor="middle" font-size="12" fill="#334155">디렉터리 · 파일</text>
+  <line x1="52" y1="317" x2="828" y2="317" stroke="#e2e8f0"/>
+  <text x="52" y="336" font-size="12.5" font-weight="700" fill="#0f172a">관리 주체</text>
+  <text x="234" y="336" text-anchor="middle" font-size="12" fill="#334155">도커 엔진</text>
+  <text x="646" y="336" text-anchor="middle" font-size="12" fill="#334155">사용자 (호스트 OS)</text>
+  <line x1="52" y1="351" x2="828" y2="351" stroke="#e2e8f0"/>
+  <text x="52" y="370" font-size="12.5" font-weight="700" fill="#0f172a">이럴 때</text>
+  <text x="234" y="370" text-anchor="middle" font-size="12" font-weight="700" fill="#1d6fb8">간단 · 환경 의존성 배제 (권장)</text>
+  <text x="646" y="370" text-anchor="middle" font-size="12" font-weight="700" fill="#a16207">호스트에서 파일을 직접 다룰 때</text>
+</svg>
