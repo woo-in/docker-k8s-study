@@ -72,7 +72,7 @@
 
 ### 7장. 도커 컴포즈를 익히자
 
-📝 [정리 노트](./ch07-docker-compose/README.md)
+🔗 [#6 docs: 7장 도커 컴포즈를 익히자 정리 (ch07)](https://github.com/woo-in/docker-k8s-study/pull/6) · 📝 [정리 노트](./ch07-docker-compose/README.md)
 
 > 컴포즈로 **Flyway(DB 마이그레이션 툴)** 를 띄우는 실습을 함께 정리했습니다. (책 범위 밖)
 
