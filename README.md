@@ -72,9 +72,13 @@
 
 ### 7장. 도커 컴포즈를 익히자
 
-- [ ] 도커 컴포즈란 — 여러 컨테이너를 **정의 파일 하나**로 관리하기
-- [ ] `docker-compose.yml` 작성법
-- [ ] 컴포즈 실행과 종료 (`up` / `down`)
+🔗 [#6 docs: 7장 도커 컴포즈를 익히자 정리 (ch07)](https://github.com/woo-in/docker-k8s-study/pull/6) · 📝 [정리 노트](./ch07-docker-compose/README.md)
+
+> 컴포즈로 **Flyway(DB 마이그레이션 툴)** 를 띄우는 실습을 함께 정리했습니다. (책 범위 밖)
+
+- **도커 컴포즈**는 `docker run` 여러 개를 YAML 정의 파일(`docker-compose.yml`) 하나에 모아, `up` 한 번에 컨테이너 · 네트워크 · 볼륨을 만들고 `down` 한 번에 정리한다.
+- 정의 파일은 `services` / `networks` / `volumes` 주 항목 아래에 이름 → 설정 순으로, **공백 들여쓰기**로 계층을 표현한다. `down`은 볼륨을 남기므로 데이터까지 지우려면 `-v`.
+- **Flyway**는 `flyway_schema_history`를 장부 삼아 pending 마이그레이션만 버전 순으로 적용한다. 적용된 파일을 고치면 체크섬 오류가 나므로, 변경은 항상 **새 버전 파일**로 쌓는다.
 
 ### 8장. 쿠버네티스를 익히자
 
