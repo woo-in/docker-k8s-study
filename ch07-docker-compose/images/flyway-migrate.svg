@@ -1,0 +1,89 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 436" width="880" height="436" font-family="'Apple SD Gothic Neo','Noto Sans KR','Malgun Gothic','Segoe UI',sans-serif">
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <rect x="0.5" y="0.5" width="879" height="435" rx="16" fill="#ffffff" stroke="#e2e8f0"/>
+
+  <text x="440" y="40" text-anchor="middle" font-size="17" font-weight="700" fill="#0f172a">Flyway migrate — 히스토리 테이블을 장부 삼아 pending 만 적용</text>
+
+  <!-- Migration files -->
+  <rect x="36" y="64" width="220" height="256" rx="12" fill="#f8fafc" stroke="#cbd5e1"/>
+  <text x="146" y="88" text-anchor="middle" font-size="13" font-weight="700" fill="#475569">마이그레이션 파일</text>
+  <text x="146" y="106" text-anchor="middle" font-size="11" fill="#64748b" font-family="monospace">classpath:db/migration</text>
+
+  <rect x="52" y="122" width="188" height="44" rx="8" fill="#ffffff" stroke="#cbd5e1"/>
+  <text x="146" y="141" text-anchor="middle" font-size="11.5" fill="#0f172a" font-family="monospace">V1__init.sql</text>
+  <text x="146" y="158" text-anchor="middle" font-size="11" fill="#64748b">적용됨</text>
+
+  <rect x="52" y="176" width="188" height="44" rx="8" fill="#ffffff" stroke="#cbd5e1"/>
+  <text x="146" y="195" text-anchor="middle" font-size="11.5" fill="#0f172a" font-family="monospace">V2__add_people.sql</text>
+  <text x="146" y="212" text-anchor="middle" font-size="11" fill="#64748b">적용됨</text>
+
+  <rect x="52" y="230" width="188" height="44" rx="8" fill="#fef9c3" stroke="#eab308"/>
+  <text x="146" y="249" text-anchor="middle" font-size="11.5" fill="#0f172a" font-family="monospace">V3__add_email.sql</text>
+  <text x="146" y="266" text-anchor="middle" font-size="11" font-weight="700" fill="#a16207">새로 추가 → pending</text>
+
+  <text x="146" y="302" text-anchor="middle" font-size="12" font-weight="700" fill="#0f172a" font-family="monospace">V{버전}__{설명}.sql</text>
+
+  <!-- Steps -->
+  <g>
+    <rect x="292" y="64" width="296" height="56" rx="10" fill="#e8f4fd" stroke="#2496ed"/>
+    <circle cx="318" cy="92" r="13" fill="#2496ed"/>
+    <text x="318" y="97" text-anchor="middle" font-size="13" font-weight="700" fill="#ffffff">1</text>
+    <text x="342" y="88" font-size="13" font-weight="700" fill="#0f172a">히스토리 테이블 확인</text>
+    <text x="342" y="107" font-size="11.5" fill="#475569">flyway_schema_history 없으면 새로 생성</text>
+
+    <rect x="292" y="130" width="296" height="56" rx="10" fill="#e8f4fd" stroke="#2496ed"/>
+    <circle cx="318" cy="158" r="13" fill="#2496ed"/>
+    <text x="318" y="163" text-anchor="middle" font-size="13" font-weight="700" fill="#ffffff">2</text>
+    <text x="342" y="154" font-size="13" font-weight="700" fill="#0f172a">마이그레이션 파일 스캔</text>
+    <text x="342" y="173" font-size="11.5" fill="#475569">프로젝트 폴더 · 클래스패스에서 탐색</text>
+
+    <rect x="292" y="196" width="296" height="56" rx="10" fill="#e8f4fd" stroke="#2496ed"/>
+    <circle cx="318" cy="224" r="13" fill="#2496ed"/>
+    <text x="318" y="229" text-anchor="middle" font-size="13" font-weight="700" fill="#ffffff">3</text>
+    <text x="342" y="220" font-size="13" font-weight="700" fill="#0f172a">히스토리와 비교</text>
+    <text x="342" y="239" font-size="11.5" fill="#475569">아직 기록이 없는 파일 = pending</text>
+
+    <rect x="292" y="262" width="296" height="56" rx="10" fill="#e8f4fd" stroke="#2496ed"/>
+    <circle cx="318" cy="290" r="13" fill="#2496ed"/>
+    <text x="318" y="295" text-anchor="middle" font-size="13" font-weight="700" fill="#ffffff">4</text>
+    <text x="342" y="286" font-size="13" font-weight="700" fill="#0f172a">버전 순으로 실행 + 기록</text>
+    <text x="342" y="305" font-size="11.5" fill="#475569">하나 실행할 때마다 히스토리에 한 줄</text>
+  </g>
+
+  <line x1="258" y1="158" x2="288" y2="158" stroke="#64748b" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <line x1="590" y1="92" x2="620" y2="92" stroke="#64748b" stroke-width="1.5" stroke-dasharray="4 3" marker-end="url(#arrow)"/>
+  <line x1="590" y1="290" x2="620" y2="290" stroke="#64748b" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <!-- DB history table -->
+  <rect x="624" y="64" width="220" height="256" rx="12" fill="#0f172a"/>
+  <text x="734" y="90" text-anchor="middle" font-size="14" font-weight="700" fill="#ffffff">DB</text>
+  <text x="734" y="108" text-anchor="middle" font-size="11.5" fill="#7dd3fc" font-family="monospace">flyway_schema_history</text>
+
+  <rect x="638" y="122" width="192" height="24" rx="4" fill="#1e293b"/>
+  <text x="652" y="138" font-size="11" fill="#94a3b8" font-family="monospace">ver</text>
+  <text x="690" y="138" font-size="11" fill="#94a3b8" font-family="monospace">script</text>
+
+  <g font-family="monospace" font-size="11" fill="#e2e8f0">
+    <text x="652" y="168">1</text>
+    <text x="690" y="168">V1__init.sql</text>
+    <text x="652" y="196">2</text>
+    <text x="690" y="196">V2__add_people.sql</text>
+  </g>
+  <rect x="638" y="206" width="192" height="26" rx="4" fill="#14532d"/>
+  <text x="652" y="223" font-size="11" fill="#bbf7d0" font-family="monospace">3</text>
+  <text x="690" y="223" font-size="11" fill="#bbf7d0" font-family="monospace">V3__add_email.sql</text>
+  <text x="734" y="252" text-anchor="middle" font-size="11" fill="#86efac">↑ 방금 기록</text>
+
+  <text x="734" y="284" text-anchor="middle" font-size="11" fill="#94a3b8">파일 내용 해시(checksum)도</text>
+  <text x="734" y="301" text-anchor="middle" font-size="11" fill="#94a3b8">함께 저장한다</text>
+
+  <!-- Footer warning -->
+  <rect x="36" y="340" width="808" height="72" rx="10" fill="#fef2f2" stroke="#fca5a5"/>
+  <text x="440" y="367" text-anchor="middle" font-size="13" font-weight="700" fill="#b91c1c">이미 적용된 V1 파일을 수정하면 → checksum 불일치 → validate 오류로 migrate 중단</text>
+  <text x="440" y="391" text-anchor="middle" font-size="12" fill="#7f1d1d">스키마를 바꾸려면 기존 파일을 고치지 말고 V3, V4 … 새 버전 파일을 쌓는다 (git 커밋을 고치지 않고 새 커밋을 쌓듯이)</text>
+</svg>

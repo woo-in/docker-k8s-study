@@ -1,0 +1,31 @@
+services:
+  mysql:
+    image: mysql:8.0
+    container_name: flyway-demo-mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: rootpass
+      MYSQL_DATABASE: demo_db
+      MYSQL_USER: demo
+      MYSQL_PASSWORD: demopass
+    ports:
+      - "3306:3306"
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost", "-uroot", "-prootpass"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+
+  flyway:
+    image: redgate/flyway
+    platform: linux/amd64
+    container_name: flyway-demo-runner
+    depends_on:
+      mysql:
+        condition: service_healthy
+    volumes:
+      - ./sql:/flyway/sql
+    environment:
+      FLYWAY_URL: jdbc:mysql://mysql:3306/demo_db?allowPublicKeyRetrieval=true&useSSL=false
+      FLYWAY_USER: root
+      FLYWAY_PASSWORD: rootpass
+    command: migrate
